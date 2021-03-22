@@ -1,0 +1,13 @@
+<?php
+function losowe($tablica,$index)
+{
+    for ($i = 0;$i<=$index;$i++)
+    {
+        $tablica[$i]=rand(0,20);
+    }
+    echo $tablica[$index];
+}
+
+$tablica = [];
+$index = 4;
+losowe($tablica,$index);
