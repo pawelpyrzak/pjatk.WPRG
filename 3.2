@@ -1,0 +1,13 @@
+ <? php
+ $num = 2;
+    $log = implode(",", rollADice($num));
+    echo $log;
+
+    function rollADice($num){
+        $arr = [];
+        for ($i=0; $i < $num; $i++) { 
+            $arr[$i] = rand(1,6);
+        }
+        return $arr;
+    }
+?>
