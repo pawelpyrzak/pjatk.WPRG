@@ -1,0 +1,13 @@
+<?php
+	 $num = 2;
+    echo multiplicationTable($num);
+
+    function multiplicationTable($num){
+        for ($i=1; $i <= $num; $i++){
+            for($j=1; $j <= $num; $j++)
+                echo $i * $j . "\t";
+            echo "<br>";
+        }
+    }
+
+?>
