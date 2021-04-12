@@ -1,0 +1,41 @@
+<?php
+
+if(isset($_POST['button']))
+{
+    if (!empty($_POST['a']))
+    {
+        if(!empty($_POST['b']))
+        {
+            switch($_POST['choose'])
+            {
+                case "sum":
+                    echo $_POST['a']+$_POST['b'];
+                    break;
+                case "substraction":
+                      echo $_POST['a']-$_POST['b'];
+                    break;
+                case "multiplication":
+                      echo $_POST['a']*$_POST['b'];
+                    break;
+                case "division":
+                      echo $_POST['a']/$_POST['b'];
+                    break;
+            }
+        
+        }
+
+    }     
+}   
+
+?>
+<form action= "#" method ="post">
+    number a: <input type="number" name= "a" ><br> </br>
+    number b: <input type="number" name= "b" ><br> </br> 
+    </br>
+        Sum:<input type="radio" name="choose" value="sum"</br>
+        Substraction:<input type="radio" name="choose" value="substraction"></br>
+        Multiplication:<input type="radio" name="choose" value="multiplication"></br>
+        Division:<input type="radio" name="choose" value="division"></br>
+    </br>
+    <button type="submit" name="button" formmethod="post">Wyślij</button>
+</form>
