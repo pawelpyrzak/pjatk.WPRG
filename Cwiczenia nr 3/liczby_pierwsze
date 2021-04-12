@@ -1,0 +1,18 @@
+<?php
+function isPrimary($x)
+{
+	$i = 2;
+	while ($i <= $x){
+		if ($i == $x){
+			echo ("Liczba jest pierwsza");
+			break;
+			}
+		else if ($x % $i == 0){
+			echo ("Liczba nie jest pierwsza");
+			break;
+		}
+		$i++;
+	}
+}
+isPrimary(123213123123123432543);
+?>
