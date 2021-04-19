@@ -1,0 +1,12 @@
+?>
+<form action= "#" method ="post">
+    number a: <input type="number" name= "a" ><br> </br>
+    number b: <input type="number" name= "b" ><br> </br> 
+    </br>
+        Sum:<input type="radio" name="choose" value="sum"</br>
+        Substraction:<input type="radio" name="choose" value="substraction"></br>
+        Multiplication:<input type="radio" name="choose" value="multiplication"></br>
+        Division:<input type="radio" name="choose" value="division"></br>
+    </br>
+    <button type="submit" name="button" formmethod="post">Wyślij</button>
+</form>
