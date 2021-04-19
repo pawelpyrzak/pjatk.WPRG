@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Save ur input into .txt file :D</title>
+</head>
+<body>
+  <form method="post">
+    Wypełnij dane kontaktowe:<br>
+Imie: <input type="text" name="pole1" style="width: 200px;" /><br />
+Nazwisko<input type="text" name="pole3" style="width: 200px;" /><br />
+Numer telefonu<input type="text" name="pole4" style="width: 200px;" /><br />
+Dodatkowe info:<textarea name="pole2" style="width: 200px; height: 100px;">
+</textarea><br />
+<input type="submit" value="Zapisz" />
+</form>
+</body>
+</html>
+<?php
+
+if(isset($_POST['textdata']))
+{
+$data=($_POST['textdata']."\n");
+$fp = fopen('data.txt', 'a');
+fwrite($fp, $data);
+fclose($fp);
+}
+?>
