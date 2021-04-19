@@ -1,0 +1,57 @@
+<h3>Reservation</h3>
+<form action = "#" method = "post" >
+
+Ilość osób: <select name = "list">
+    <option value = "1"> 1</option>
+    <option value = "2"> 2</option>
+    <option value = "3"> 3</option>
+    <option value = "4"> 4</option>
+</select>
+<input type = "submit" name = "sub" value="send">
+</form>
+
+
+<form action="index2.php" method="POST"
+
+
+<?php
+if(isset($_POST['sub']))
+{
+    $numberOfGuests = $_POST["list"];
+    echo '<input type="hidden" name="numberOfGuests" value="'. $numberOfGuests . '">';
+    for($i = 0 ; $i <($_POST["list"]) ; $i++) {
+        echo $i+1 . 'Imię: <input type="text" name="name"['. $i .']"><br>';
+        echo ' Nazwisko: <input type="text" name="surname" ['. $i .']"><br>';
+        echo ' Adres zamieszkania: <input type="text" name="address"><br>';
+        echo ' Numer telefonu: <input type="text" name="telephonenumber"><br>';
+        echo ' E-mail: <input type="text" name="email"><br>';
+        echo ' Numer karty kredytowej: <input type = "text" name ="debitcard"><br>';
+        echo ' Data przyjazdu: <input type="date" name = "arrivedata"><br>';
+        echo ' Data wyjazdu: <input type="date" name = "checkoutdata"><br>';
+        }
+        echo ' Parking <input type="checkbox" name = "udogodnienia" ><br>';
+        echo ' Wi-Fi <input type="checkbox" name = "udogodnienia" ><br>';
+        echo ' Dodatkowe łóżko dla dziecka <input type="checkbox" name = "udogodnienia" ><br>';
+        echo ' All in exclusive <input type="checkbox" name = "udogodnienia" ><br>';
+        echo'<br/>';
+
+    echo ' Dodatkowe informacje: <textarea name="comment" rows="5" cols="40"></textarea><br>';
+
+
+
+    }
+
+?>
+<form action="index2.php" method="post">
+<input type="submit" value="Potwierdzam">
+</form>
+
+
+</form>
+
+    
+
+
+    
+
+
