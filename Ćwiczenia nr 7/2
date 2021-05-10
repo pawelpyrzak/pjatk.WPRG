@@ -1,0 +1,24 @@
+<form method="post" action="#">
+<?php
+session_start();
+for ($i=0;$i<$_SESSION["iloscOsob"];$i++){
+    echo sprintf("<input name='imie%d' type='text'><input name='nazwisko%d' type='text'><br>", $i, $i);
+}
+?>
+<button type="submit" name="save" formmethod="post">Zapisz do sesji</button>
+<button type="submit" name="see" formmethod="post">Wyswietl sesje</button>
+</form>
+
+<?php
+if (isset($_POST['save'])){
+    foreach ($_POST as $values => $item)
+    {
+        echo $values."=>".$item."<br>";
+        if ($values!="save"){
+            $_SESSION[$values] = $item;
+        }
+    }
+}
+if (isset($_POST['see'])){
+    header("Location: 13.php");
+}
