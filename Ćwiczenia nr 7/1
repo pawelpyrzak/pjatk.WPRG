@@ -1,0 +1,34 @@
+<html>
+<header>
+	<meta charset = "utf-8">
+</header>
+<body>
+<form method = "post" action = "#">
+	Data przyjazdu: <input type="date" name="begin"></br>
+	Data wyjazdu: <input type="date" name="end"></br>
+	Ilosc os: <input type="number" name="how_many"></br>
+	Imie: <input type="text" name="name"></br>
+	Nazwisko: <input type="text" name="surname"></br>
+	Adres: <input type="text" name="address"></br>
+	Karta kredytowa: <input type="number" name="card_number"></br>
+	E-mail: <input type="email" name="e-mail"></br>
+	Dodatkowe Wymagania: <input type="text" name="other"></br>
+	<button type = "submit" name = "button" formmethod = "post">Wyślij</button
+	
+	</form>
+<?php
+if (isset($_POST['button']))
+{
+    session_start();
+    foreach ($_POST as $values => $item)
+    {
+        echo $values."=>".$item."<br>";
+        if ($values!="button"){
+            $_SESSION[$values] = $item;
+        }
+    }
+    header("Location: 11.php");
+}
+?>
+</body>
+</html>
