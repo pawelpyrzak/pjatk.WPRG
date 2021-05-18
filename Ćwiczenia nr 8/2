@@ -1,0 +1,12 @@
+<?php
+   
+    if (isset($_POST['signup']))
+    {	
+		$con = mysqli_connect("localhost","postgres","pawel","postgres","1234");
+		$quer = mysqli_query($con,"SELECT * FROM users") or die("Błąd");
+	}
+
+	while ($row = mysqli_fetch_assoc($result)) {
+		echo($row["login"] + $row["haslo"]);
+}
+?>
