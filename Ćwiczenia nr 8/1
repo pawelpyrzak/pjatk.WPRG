@@ -3,5 +3,5 @@
     <b>Hasło:</b> <input type="password" name="password1"><br>
     <b>Powtórz hasło:</b> <input type="password" name="password2"><br><br>
     <b>Email:</b> <input type="text" name="email"><br>
-    <input type="submit" value="Utwórz konto" name="rejestruj">
+    <input type="submit" value="Utwórz konto" name="signup">
 </form>
